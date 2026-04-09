@@ -1,0 +1,60 @@
+/* ============================================================
+   TRANSMAA — Design Tokens & CSS Variables
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600&display=swap');
+
+:root {
+  /* Brand */
+  --orange:       #FF5A1F;
+  --orange-dark:  #C94010;
+  --orange-light: #FF8C55;
+  --orange-bg:    #FFF3EE;
+  --gold:         #F5A623;
+
+  /* Neutrals */
+  --ink:          #12100E;
+  --ink-mid:      #2C2825;
+  --ink-light:    #4A4540;
+  --smoke:        #F0EAE0;
+  --mist:         #D8D0C4;
+  --white:        #FFFFFF;
+  --cream:        #F7EFE0;
+
+  /* Status */
+  --success:      #16A34A;
+  --success-bg:   #DCFCE7;
+  --danger:       #DC2626;
+  --danger-bg:    #FEE2E2;
+  --warn:         #D97706;
+  --warn-bg:      #FEF3C7;
+  --blue:         #1D4ED8;
+  --blue-bg:      #DBEAFE;
+
+  /* Typography */
+  --font-display: 'Bricolage Grotesque', sans-serif;
+  --font-body:    'DM Sans', sans-serif;
+
+  /* Spacing */
+  --sp-xs:  4px;
+  --sp-sm:  8px;
+  --sp-md:  16px;
+  --sp-lg:  24px;
+  --sp-xl:  32px;
+
+  /* Radii */
+  --r-sm:   8px;
+  --r-md:   12px;
+  --r-lg:   16px;
+  --r-xl:   20px;
+  --r-pill: 100px;
+
+  /* Shadows */
+  --shadow-sm:  0 1px 4px rgba(0,0,0,0.06);
+  --shadow-md:  0 2px 12px rgba(0,0,0,0.08);
+  --shadow-lg:  0 8px 32px rgba(0,0,0,0.12);
+  --shadow-orange: 0 4px 16px rgba(255,90,31,0.3);
+
+  /* Max width (mobile-first phone shell) */
+  --max-w: 430px;
+}

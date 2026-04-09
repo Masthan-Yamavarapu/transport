@@ -1,0 +1,132 @@
+/* ============================================================
+   TRANSMAA — Reset & Base
+   ============================================================ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--smoke);
+  color: var(--ink);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+input, select, textarea, button {
+  font-family: var(--font-body);
+  font-size: 14px;
+}
+
+button {
+  font-family: var(--font-display);
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: var(--orange);
+  text-decoration: none;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--mist); border-radius: 4px; }
+
+/* Date/time input */
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-calendar-picker-indicator {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+/* ============================================================
+   Layout — Phone Shell
+   ============================================================ */
+
+.app-shell {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  min-height: 100vh;
+  background: var(--white);
+  position: relative;
+  overflow-x: hidden;
+}
+
+.page {
+  padding: 20px 20px 100px;
+}
+
+.page--centered {
+  padding: 60px 24px 100px;
+  text-align: center;
+}
+
+/* Role selector landing */
+.landing {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  min-height: 100vh;
+  background: var(--white);
+  display: flex;
+  flex-direction: column;
+}
+
+/* ============================================================
+   Animations
+   ============================================================ */
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-8px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes pop {
+  0%   { opacity: 0; transform: scale(0.9); }
+  70%  { transform: scale(1.03); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.5; }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25%       { transform: translateX(-6px); }
+  75%       { transform: translateX(6px); }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.fade-up  { animation: fadeUp  0.35s ease both; }
+.slide-in { animation: slideIn 0.3s ease both; }
+.pop      { animation: pop     0.4s cubic-bezier(.22,.68,0,1.2) both; }
+.pulse    { animation: pulse   1.5s ease infinite; }
